@@ -26,7 +26,9 @@
 
 ## Funcionalidades
 
-1. Dark Theme.
+1. Pegar dados da API TMDB
+2. Carousel slide
+3. Carousel de Filmes
 
 
 ## Captura de tela 
@@ -46,7 +48,7 @@
 
 ## Linguagens utilizadas
 📝
-HTML | CSS | JavaScript
+HTML | CSS, Bootstrap | JavaScript
 
 ###  O que eu aprendi
 🤓
