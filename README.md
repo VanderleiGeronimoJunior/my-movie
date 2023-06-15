@@ -68,7 +68,8 @@ HTML | CSS, Bootstrap | JavaScript
 
 ###   Recursos Úteis
 🔧
-- <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+- <a href="https://boxicons.com/?query=">Box Icons</a>
+- <a href="https://getbootstrap.com/docs/5.3/components/carousel/">Carousel Bootstrap</a>
 
 ###   Créditos
 

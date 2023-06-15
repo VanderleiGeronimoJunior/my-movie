@@ -15,14 +15,28 @@
     --body: #00050D;
     --text-color: #f1f1f1;
 	--second-color:#edeae3;
-	--text-color:#00050D;
-	--bg-color:#fff;
+	/* --text-color:; */
+	--bg-color:#00050D;
     --hover-color: ;
 
     /* Box Shadow */
 --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
 
 }
+
+/* Scroll Bar */
+
+html::-webkit-scrollbar
+{
+	width: 0.5rem;
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb
+{
+	background: rgba(255, 0, 0, 0.5);
+}
+
+/* Scroll Bar Fim */
 
 body{
     background: var(--body);
@@ -45,14 +59,14 @@ header
 	transition: 0.5s linear;
 }
 header.shadow{
-	background: var(--text-color);
+	background: var(--bg-color);
 	box-shadow: var(--box-shadow);
 }
 
 .logo h1
 {
     font-size: 25px;
-    color: var(--bg-color);
+    color: var(--text-color);
     
 }
 .logo span{
@@ -69,7 +83,7 @@ header.shadow{
 .navbar a
 {
 	padding: 8px 17px;
-	color: var(--bg-color);
+	color: var(--text-color);
 	font-size: 1rem;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -92,12 +106,12 @@ header.shadow{
 }
 .header-icon .bx
 {
-	color: var(--bg-color);
+	color: var(--text-color);
 
 }
 .header-icon .bx:hover
 {
-	color: var(--main-color);
+	color: var(--bg-color);
 }
 
 #menu-icon
@@ -121,7 +135,7 @@ header.shadow{
 	top: -100%;
 	left: 50%;
 	transform: translate(-50%);
-	background: var(--bg-color);
+	background: var(--text-color);
 	width: 100%;
 }
 
@@ -145,7 +159,7 @@ header.shadow{
 /* Carousel slide */
 
 .home{
-	background: linear-gradient(to left, transparent 0%, grey 200%);
+	background: linear-gradient(to left, transparent 0%, var(--body) 200%);
     width: 700px;
     height: 100%;
     top: 0px;
@@ -178,13 +192,13 @@ header.shadow{
 	display: flex;
 	align-items: center;
 	column-gap: 0.8rem;
-	color: var(--bg-color);	
+	color: var(--text-color);	
     text-decoration: none;
 }
 .watch-btn .bx
 {
 	font-size: 2rem;
-	background: var(--text-color);
+	background: var(--bg-color);
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -204,6 +218,49 @@ header.shadow{
 
 /* Carousel slide Fim */
 
+/* Carousel 1 */
+
+.movie-box
+{
+	position: relative;
+	width: 100%;
+	height: 380px;
+	overflow: hidden;
+}
+.movie-box-img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.movie-box .box-text
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 28%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 14px;
+	background: linear-gradient( 8deg, hsl(240 17% 14% / 74%) 14%, hsl(240 17% 14% / 14%) 44%);
+	overflow: hidden;
+}
+.movie-title
+{
+	font-size: 1.1rem;
+	font-weight: 500;
+    color: var(--text-color);
+}
+.movie-type
+{
+    font-size: 0.938rem;	
+    color: var(--text-color);
+}
+
+/* Carousel 1 Fim */
 
 /* Carrosel */
   
@@ -212,7 +269,7 @@ header.shadow{
     margin: 1em 0;
     padding-left: 1rem;
     font-size: 32px;
-    color: var(--bg-color);
+    color: var(--text-color);
   }
   
   .container-slide {
@@ -237,25 +294,25 @@ header.shadow{
     font-size: 50px;
     line-height: 250px;
     width: 60px;
-    color: var(--bg-color);
+    color: var(--text-color);
     transition: all 600ms ease-in-out;
-    background: linear-gradient(to left, transparent 0%, black 200%);
-    opacity: 0.1;
+    background: linear-gradient(to left, transparent 0%, var(--body) 200%);
+    /* opacity: 0.1; */
     cursor: pointer;
     border: none;
     z-index: 10;
   }
   
-  .arrow-left:hover,
+  /* .arrow-left:hover,
   .arrow-right:hover {
     opacity: 1;
-  }
+  } */
   
   .arrow-right {
     right: 0;
     left: auto;
     text-align: right;
-    background: linear-gradient(to right, transparent 0%, black 200%);
+    background: linear-gradient(to right, transparent 0%, var(--body) 200%);
   }
   
   .gallery {
@@ -274,16 +331,18 @@ header.shadow{
     flex-shrink: 0;    
     transition: all 600ms ease-in-out;
     cursor: pointer;
-    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    /* opacity: 0.5; */
   }
 .item:hover{
     transform: scale(1.1);
     transition: 0.5s;
 }
   
-  .current-item {
+  /* .current-item {
     opacity: 1;
-  }
+  } */
   
   /* This is from w3schools */
   /* 

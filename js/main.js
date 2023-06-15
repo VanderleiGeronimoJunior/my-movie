@@ -1,20 +1,52 @@
-const url = "https://api.themoviedb.org/3/movie/157336?";
+
+
+const url = `https://api.themoviedb.org/3/movie/${key}`;
 const src = "https://api.themoviedb.org/3/search/movie/";
-const key = "api_key=1b80dda88aa3961467567d2f34531e2c";
 
-async function getAllPosts() {
-    const response = await fetch(url + key);
+
+// async function getMovie() {
+//     const response = await fetch(url);
   
-    console.log(response);
+//     console.log(response);
 
-    const data = await response.json();
+//     const data = await response.json();
 
-  console.log(data);
+//   console.log(data);
   
-}
+// }
 
 
-getAllPosts()
+// getMovie()
+
+const authentication = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjgwZGRhODhhYTM5NjE0Njc1NjdkMmYzNDUzMWUyYyIsInN1YiI6IjYxOTkxZTM1NGY5YTk5MDA2Nzg3ZTMyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1QzQM7rSPyevB1OPqHxoxkXAHgYiC5h30HsjyBWXwQw'
+    }
+  };
+  
+  fetch('https://api.themoviedb.org/3/authentication', authentication)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
+
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYjgwZGRhODhhYTM5NjE0Njc1NjdkMmYzNDUzMWUyYyIsInN1YiI6IjYxOTkxZTM1NGY5YTk5MDA2Nzg3ZTMyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1QzQM7rSPyevB1OPqHxoxkXAHgYiC5h30HsjyBWXwQw'
+    }
+  };
+  
+  fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
+
+
 
 // NavBar
 
