@@ -14,55 +14,154 @@
     <title>My Movie</title>
 </head>
 <body>
-    <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">My Movie</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Filmes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Séries</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-          </div>
-        </div>
-      </nav>
 
-      <div class="container"></div>
+    <!-- NavBar -->
+
+<header>
+	<a href="#" class="logo">
+		<h1>My Movie</h1>
+	</a>
+
+	<!-- Menu Icon -->
+
+	<i class='bx bx-menu' id="menu-icon"></i>
+	
+	<!-- Links  -->
+
+	<ul class="navbar">
+		<li><a href="#">Início</a></li>
+		<li><a href="#">Filmes</a></li>
+		<li><a href="#">Séries</a></li>
+		<li><a href="#">Minha Lista</a></li>
+	</ul>
+
+	<!-- Icon -->
+	<div class="header-icon">
+		<i class='bx bx-search' id="search-icon"></i>
+	</div>
+
+	<!-- Search Box -->
+
+	<div class="search-box">
+		<input type="search" name="" id="" placeholder="Search Here...">
+	</div>
+</header>
+
+
+<!-- Carousel slide -->
+
+<div id="carouselExampleAutoplaying myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/home-background.png" class="d-block w-100" alt="...">
+        <div class="home carousel-caption d-none d-md-block">
+            <div class="home-text ">
+                <h1 class="home-title"> Hitman's Wife's <br> Bodyguard </h1>
+                <p>Releasing 10 April</p>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow'></i>
+                    <span>Watch the trailler</span>
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/home-background.png" class="d-block w-100" alt="...">
+        <div class="home carousel-caption d-none d-md-block">
+            <div class="home-text">
+                <h1 class="home-title"> Hitman's Wife's <br> Bodyguard </h1>
+                <p>Releasing 10 April</p>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow'></i>
+                    <span>Watch the trailler</span>
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/home-background.png" class="d-block w-100" alt="...">
+        <div class="home carousel-caption d-none d-md-block">
+            <div class="home-text">
+                <h1 class="home-title"> Hitman's Wife's <br> Bodyguard </h1>
+                <p>Releasing 10 April</p>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow'></i>
+                    <span>Watch the trailler</span>
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/home-background.png" class="d-block w-100" alt="...">
+        <div class="home carousel-caption d-none d-md-block">
+            <div class="home-text">
+                <h1 class="home-title"> Hitman's Wife's <br> Bodyguard </h1>
+                <p>Releasing 10 April</p>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow'></i>
+                    <span>Watch the trailler</span>
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/home-background.png" class="d-block w-100" alt="...">
+        <div class="home carousel-caption d-none d-md-block">
+            <div class="home-text">
+                <h1 class="home-title"> Hitman's Wife's <br> Bodyguard </h1>
+                <p>Releasing 10 April</p>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow'></i>
+                    <span>Watch the trailler</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- Carousel slide Fim -->
+    
 
 <!-- carrosel 1-->
 
       <h1>Adicionade Recentimente</h1>
-<div class="container-slide">
-  <button class="arrow-left control" aria-label="Previous image"><i class='bx bxs-chevron-left'></i></button>
-  <button class="arrow-right control" aria-label="Next Image"><i class='bx bxs-chevron-right'></i></button>
-  <div class="gallery-wrapper">
-    <div class="gallery">
-      <!--       <div class="item current-item cyan"></div>
-      <div class="item deeppink"></div>
-      <div class="item turquoise"></div>
-      <div class="item darkblue"></div>
-      <div class="item purple"></div> -->
-      <img src="img/movie-3.jpg" alt="Street Image" class="item current-item">
-      <img src="img/movie-4.jpg" alt="Zoo Image" class="item current-item">
-      <img src="img/movie-2.jpg" alt="Animal Image" class="item current-item">
-      <img src="img/movie-7.jpg" alt="Model Image" class="item current-item">
-      <img src="img/movie-6.jpg" alt="Model Image" class="item current-item">
-      <img src="img/movie-5.jpg" alt="Model Image" class="item current-item">
-      <img src="img/movie-8.jpg" alt="Model Image" class="item current-item">
-      <img src="img/movie-1.jpg" alt="Beach Image" class="item current-item">
-    </div>
-  </div>
-</div>
+      <div class="container-slide">
+        <button class="arrow-left control" aria-label="Previous image"><i class='bx bxs-chevron-left'></i></button>
+        <button class="arrow-right control" aria-label="Next Image"><i class='bx bxs-chevron-right'></i></button>
+        <div class="gallery-wrapper">
+          <div class="gallery">
+            <!--       <div class="item current-item cyan"></div>
+            <div class="item deeppink"></div>
+            <div class="item turquoise"></div>
+            <div class="item darkblue"></div>
+            <div class="item purple"></div> -->
+            <img src="img/movie-4.jpg" alt="Zoo Image" class="item current-item">
+            <img src="img/movie-2.jpg" alt="Animal Image" class="item current-item">
+            <img src="img/movie-3.jpg" alt="Street Image" class="item current-item">
+            <img src="img/movie-7.jpg" alt="Model Image" class="item current-item">
+            <img src="img/movie-8.jpg" alt="Model Image" class="item current-item">
+            <img src="img/movie-1.jpg" alt="Beach Image" class="item current-item">
+            <img src="img/movie-5.jpg" alt="Model Image" class="item current-item">
+            <img src="img/movie-6.jpg" alt="Model Image" class="item current-item">
+          </div>
+        </div>
+      </div>
 
 <!-- carrosel 1 Fim -->
 <!-- carrosel 2-->

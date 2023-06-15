@@ -1,37 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+	scroll-padding-top: 4rem;
+	scroll-behavior: smooth;
+}
+
+:root{
+    --body: #00050D;
+    --text-color: #f1f1f1;
+	--second-color:#edeae3;
+	--text-color:#00050D;
+	--bg-color:#fff;
+    --hover-color: ;
+
+    /* Box Shadow */
+--box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+
 }
 
 body{
-    background: #00050D;
+    background: var(--body);
 }
 
 
+/* navBar */
+
+header
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 100px;
+	transition: 0.5s linear;
+}
+header.shadow{
+	background: var(--text-color);
+	box-shadow: var(--box-shadow);
+}
+.logo h1
+{
+    font-size: 25px;
+    color: var(--bg-color);
+    text-decoration: none;
+    list-style: none;
+}
 .navbar
 {
-    height: 95px;
-    background-color: #ccc;
-    color: #0006bb;
+    display: flex;
+    list-style: none;
+}	
+.navbar a
+{
+	padding: 8px 17px;
+	color: var(--bg-color);
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 500;
+    text-decoration: none;
+}	
+.navbar a:hover
+{
+	background: var(--main-color);
+	border-radius: 0.2rem;
+	transition: 0.2s all linear;
 }
+
+.header-icon
+{
+	font-size: 22px;
+	cursor: pointer;
+	z-index: 10000;
+	display: flex;
+	column-gap: 0.8rem;
+}
+.header-icon .bx
+{
+	color: var(--bg-color);
+
+}
+.header-icon .bx:hover
+{
+	color: var(--main-color);
+}
+
+#menu-icon
+{
+	color: var(--bg-color);
+	font-size: 24px;
+	z-index: 100001;
+	cursor: pointer;
+	display: none;
+}
+
+.search-box.active
+{
+	top: 110%;
+	box-shadow: var(--box-shadow);
+	transition: 0.2s all linear;
+}
+.search-box
+{
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%);
+	background: var(--bg-color);
+	width: 100%;
+}
+
+.search-box input
+{
+	padding: 20px;
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 1rem;
+	color: var(--main-color);
+}
+.search-box input::placeholder
+{
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+/* navBar Fim */
+
+/* Carousel slide */
+
+.home{
+	background: linear-gradient(to left, transparent 0%, grey 200%);
+    width: 700px;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text
+{
+    margin-left: 200px;
+    margin-top: 225px;
+	padding-left: 40px;	
+}
+.home-title
+{
+	font-size: 2rem;
+	font-weight: 600;
+}
+.home-text p
+{
+	font-size: 0.938rem;
+	margin: 10px 0 20px;
+	color: var(--main-color);	
+}
+.watch-btn
+{
+	display: flex;
+	align-items: center;
+	column-gap: 0.8rem;
+	color: var(--bg-color);	
+    text-decoration: none;
+}
+.watch-btn .bx
+{
+	font-size: 21px;
+	background: var(--text-color);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.watch-btn .bx:hover
+{
+	background: var(--hover-color);
+}
+.watch-btn span
+{
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+/* Carousel slide Fim */
 
 
 /* Carrosel */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   h1 {
     text-align: left;
     margin: 1em 0;
     padding-left: 1rem;
     font-family: sans-serif;
-    color: #f1f1f1;
+    color: var(--bg-color);
   }
   
   .container-slide {
@@ -56,7 +231,7 @@ body{
     font-size: 50px;
     line-height: 250px;
     width: 60px;
-    color: #000;
+    color: var(--bg-color);
     transition: all 600ms ease-in-out;
     background: linear-gradient(to left, transparent 0%, black 200%);
     opacity: 0.1;
@@ -81,6 +256,9 @@ body{
     display: flex;
     flex-flow: row nowrap;
     gap: 15px;
+  }
+
+  .container-slide .gallery-wrapper .gallery .movie-box-img{
     transform: scale(1.1);
 	transition: 0.5s;
   }
@@ -135,6 +313,5 @@ body{
   .purple {
     background: purple;
   }
-  
 
 /* Carrosel Fim */
