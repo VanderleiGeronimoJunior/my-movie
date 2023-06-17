@@ -7,7 +7,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+    <!-- swiffy-slider -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     <!-- arquivos css e js -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/key.js" defer></script>
@@ -75,16 +76,9 @@
 
 <!-- Carousel slide -->
 
-<div id="carouselExampleAutoplaying myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
-    </div>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="8000">
+      <div class="carousel-item active">
         <img src="https://source.unsplash.com/random/2560x1080/?travel" class="d-block w-100" alt="...">
         <div class="home carousel-caption d-none d-md-block">
             <div class="home-text ">
@@ -97,7 +91,7 @@
             </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="8000">
+      <div class="carousel-item">
         <img src="https://source.unsplash.com/random/2560x1080/?model" class="d-block w-100" alt="...">
         <div class="home carousel-caption d-none d-md-block">
             <div class="home-text">
@@ -110,7 +104,7 @@
             </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="8000">
+      <div class="carousel-item">
         <img src="https://source.unsplash.com/random/2560x1080/?woman" class="d-block w-100" alt="...">
         <div class="home carousel-caption d-none d-md-block">
             <div class="home-text">
@@ -123,7 +117,7 @@
             </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="8000">
+      <div class="carousel-item">
         <img src="https://source.unsplash.com/random/2560x1080/?work" class="d-block w-100" alt="...">
         <div class="home carousel-caption d-none d-md-block">
             <div class="home-text">
@@ -136,7 +130,7 @@
             </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="8000">
+      <div class="carousel-item">
         <img src="https://source.unsplash.com/random/2560x1080/?car" class="d-block w-100" alt="...">
         <div class="home carousel-caption d-none d-md-block">
             <div class="home-text">
@@ -150,11 +144,11 @@
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -167,13 +161,18 @@
 <!-- carrosel 1 -->
 
 <h1>Ação</h1>
-<div class="container-slide">
-  <button class="arrow-left control" aria-label="Previous image"><i class='bx bxs-chevron-left'></i></button>
-  <button class="arrow-right control" aria-label="Next Image"><i class='bx bxs-chevron-right'></i></button>
-    <div class="gallery-wrapper">
-        <div id="main"></div>
+<div class=" container-slide">
+  <div class="swiper-container swiper">
+    <div class="swiper-wrapper">
+              <div id="main"></div>
+      </div>
+
     </div>
-</div>
+    <!-- Add Pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
 <!-- carrosel 1 Fim -->
 
@@ -189,5 +188,23 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <!-- Bootstrap -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- swiffy-slider -->
+      <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+</script>
 </body>
 </html>

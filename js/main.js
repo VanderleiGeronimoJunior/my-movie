@@ -9,6 +9,85 @@ const API_URL = `${url}/discover/movie?sort_by=popularity.desc&${key}`;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = `${url}/search/movie?${key}`;
 
+const genres = [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 10770,
+      "name": "TV Movie"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 10752,
+      "name": "War"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
+
 
 // Pegar filmes da API
 getMovie(API_URL)
@@ -59,11 +138,11 @@ function getMovie(url) {
         movieEl.classList.add('gallery');
         movieEl.innerHTML = `
 
-        <div class="item">
+        <div class="item swiper-slide">
 
                 <div class="movie-box">
 
-                <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" class="movie-box-img">
+                <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" class="movie-box-img d-block w-100">
 
                 <div class="box-text">
                     <h2 class="movie-title">${title}</h2>
@@ -101,86 +180,6 @@ function getColor(vote) {
 // Cor da Nota Fim
 
 // Categorias
-
-// const genres = [
-//     {
-//       "id": 28,
-//       "name": "Action"
-//     },
-//     {
-//       "id": 12,
-//       "name": "Adventure"
-//     },
-//     {
-//       "id": 16,
-//       "name": "Animation"
-//     },
-//     {
-//       "id": 35,
-//       "name": "Comedy"
-//     },
-//     {
-//       "id": 80,
-//       "name": "Crime"
-//     },
-//     {
-//       "id": 99,
-//       "name": "Documentary"
-//     },
-//     {
-//       "id": 18,
-//       "name": "Drama"
-//     },
-//     {
-//       "id": 10751,
-//       "name": "Family"
-//     },
-//     {
-//       "id": 14,
-//       "name": "Fantasy"
-//     },
-//     {
-//       "id": 36,
-//       "name": "History"
-//     },
-//     {
-//       "id": 27,
-//       "name": "Horror"
-//     },
-//     {
-//       "id": 10402,
-//       "name": "Music"
-//     },
-//     {
-//       "id": 9648,
-//       "name": "Mystery"
-//     },
-//     {
-//       "id": 10749,
-//       "name": "Romance"
-//     },
-//     {
-//       "id": 878,
-//       "name": "Science Fiction"
-//     },
-//     {
-//       "id": 10770,
-//       "name": "TV Movie"
-//     },
-//     {
-//       "id": 53,
-//       "name": "Thriller"
-//     },
-//     {
-//       "id": 10752,
-//       "name": "War"
-//     },
-//     {
-//       "id": 37,
-//       "name": "Western"
-//     }
-//   ]
-
 
 // const optionEl = document.getElementById('option');
 
@@ -254,39 +253,39 @@ window.addEventListener('scroll', () => {
 
 // carrosel
 
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const gallery = document.querySelectorAll(".gallery");
-const maxItems = gallery.length;
+// const controls = document.querySelectorAll(".control");
+// let currentItem = 0;
+// const items = document.querySelectorAll(".item");
+// const maxItems = items.length;
 
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
+// controls.forEach((control) => {
+//   control.addEventListener("click", (e) => {
+//     isLeft = e.target.classList.contains("arrow-left");
 
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
-    }
+//     if (isLeft) {
+//       currentItem -= 1;
+//     } else {
+//       currentItem += 1;
+//     }
 
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
+//     if (currentItem >= maxItems) {
+//       currentItem = 0;
+//     }
 
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
+//     if (currentItem < 0) {
+//       currentItem = maxItems - 1;
+//     }
 
-    gallery.forEach((gallery) => gallery.classList.remove("current-item"));
+//     items.forEach((gallery) => gallery.classList.remove("current-item"));
 
-    gallery[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "center"
-    });
+//     items[currentItem].scrollIntoView({
+//       behavior: "smooth",
+//       inline: "center"
+//     });
 
-    items[currentItem].classList.add("current-item");
-  });
-});
+//     items[currentItem].classList.add("current-item");
+//   });
+// });
 
 
 // carrosel Fim
