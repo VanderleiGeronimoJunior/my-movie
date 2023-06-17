@@ -256,8 +256,8 @@ window.addEventListener('scroll', () => {
 
 const controls = document.querySelectorAll(".control");
 let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
+const gallery = document.querySelectorAll(".gallery");
+const maxItems = gallery.length;
 
 controls.forEach((control) => {
   control.addEventListener("click", (e) => {
@@ -277,9 +277,9 @@ controls.forEach((control) => {
       currentItem = maxItems - 1;
     }
 
-    items.forEach((item) => item.classList.remove("current-item"));
+    gallery.forEach((gallery) => gallery.classList.remove("current-item"));
 
-    items[currentItem].scrollIntoView({
+    gallery[currentItem].scrollIntoView({
       behavior: "smooth",
       inline: "center"
     });

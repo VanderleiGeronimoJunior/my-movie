@@ -294,23 +294,23 @@ header.shadow{
     width: 60px;
     color: var(--text-color);
     transition: all 600ms ease-in-out;
-    background: linear-gradient(to left, transparent 0%, var(--body) 200%);
-    /* opacity: 0.1; */
+    background: linear-gradient(to left, transparent 0%, var(--body) 100%);
+    opacity: 0.1;
     cursor: pointer;
     border: none;
     z-index: 10;
   }
-  
-  /* .arrow-left:hover,
+
+.arrow-left:hover,
   .arrow-right:hover {
     opacity: 1;
-  } */
+  }
   
   .arrow-right {
     right: 0;
     left: auto;
     text-align: right;
-    background: linear-gradient(to right, transparent 0%, var(--body) 200%);
+    background: linear-gradient(to right, transparent 0%, var(--body) 100%);
   }
   
   .gallery {
