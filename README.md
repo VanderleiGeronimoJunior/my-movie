@@ -70,6 +70,8 @@ HTML | CSS, Bootstrap | JavaScript
 🔧
 - <a href="https://boxicons.com/?query=">Box Icons</a>
 - <a href="https://getbootstrap.com/docs/5.3/components/carousel/">Carousel Bootstrap</a>
+- Use a URL abaixo para trazer imagens no card, slider... passe o tamanho da imagem e depois do sinal de interrogação o tema da imagem que tu quer como car, movie, peaple, etc...
+- https://source.unsplash.com/random/2560x1080/?model
 
 ###   Créditos
 
