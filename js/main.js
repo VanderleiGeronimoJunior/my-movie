@@ -143,3 +143,16 @@ async function showMovieData() {
 
   scrollPerClick = document.querySelector(".img-1").clientWidth + imagePadding;
 }
+
+
+
+// Loader
+onload = () => {
+	const load = document.getElementById('loader');
+
+	setTimeout( () => {
+		load.style.display = 'none';		
+	}, 2500);
+}
+
+

@@ -68,7 +68,7 @@ HTML | CSS, Bootstrap | JavaScript
 
 1. login de usuário
 2. Pre Loading
-3. Modal com detalhe sdo filme
+3. Modal com detalhes do filme
 4. Adicionar aos Favoritos
 5. Tratar da Responsividade
 
@@ -82,6 +82,8 @@ HTML | CSS, Bootstrap | JavaScript
 🔧
 - <a href="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js">Axios Js CDN</a>
 - <a href="https://axios-http.com/docs/intro">Axios Js Docs</a>
+- <a href="https://www.toptal.com/designers/htmlarrows/">htmlarrows</a>
+- <a href="https://lordicon.com/">Icons by Lordicon.com</a>
 
 
 - <a href="https://boxicons.com/?query=">Box Icons</a>
