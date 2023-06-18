@@ -21,8 +21,11 @@
 
 ##  Objetivos
 
-- Ganhar mais conhecimento em JavaScript
+- Ganhar mais conhecimento em JavaScript.
 - Trabalhar o raciocinio lógico.
+- Trabalha com API.
+- Exercitar Bootstrap.
+- Exercitar Swipper.js.
 
 ## Funcionalidades
 
@@ -53,12 +56,21 @@ HTML | CSS, Bootstrap | JavaScript
 ###  O que eu aprendi
 🤓
 
+- Fazer o consume de dados de uma API, manipulando a URL para trazer os dados até a tela.
+
 
 
 ### Desenvolvimento contínuo
 
 
 ## Melhorias na alicação
+
+
+1. login de usuário
+2. Pre Loading
+3. Modal com detalhe sdo filme
+4. Adicionar aos Favoritos
+5. Tratar da Responsividade
 
 
 
@@ -68,6 +80,10 @@ HTML | CSS, Bootstrap | JavaScript
 
 ###   Recursos Úteis
 🔧
+- <a href="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js">Axios Js CDN</a>
+- <a href="https://axios-http.com/docs/intro">Axios Js Docs</a>
+
+
 - <a href="https://boxicons.com/?query=">Box Icons</a>
 - <a href="https://getbootstrap.com/docs/5.3/components/carousel/">Carousel Bootstrap</a>
 - Use a URL abaixo para trazer imagens no card, slider... passe o tamanho da imagem e depois do sinal de interrogação o tema da imagem que tu quer como car, movie, peaple, etc...

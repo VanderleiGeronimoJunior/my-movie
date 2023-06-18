@@ -7,8 +7,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- swiffy-slider -->
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     <!-- arquivos css e js -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/key.js" defer></script>
@@ -66,8 +64,8 @@
 
 	<!-- Search Box -->
 
-	<div class="search-box">
-		<input type="search" name="" id="" placeholder="Search Here...">
+	<div id="search-box" >
+		<input type="search" name="" id="search" placeholder="Search Here...">
 	</div>
 </header>
 
@@ -155,23 +153,21 @@
   </div>
 
 <!-- Carousel slide Fim -->
-    
-
 
 <!-- carrosel 1 -->
+    
+<section class="carousel2">
+  <div class="carouselBox">
 
-<h1>Ação</h1>
-<div class=" container-slide">
-  <div class="swiper-container swiper">
-    <div id="main" class="swiper-wrapper">
-    </div>
 
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+
+    <a class="switchLeft sliderButton" onclick="sliderScorllLeft()"><i class='bx bx-chevron-left'></i></a>
+    <a class="switchRight sliderButton" onclick="sliderScorllRight()"><i class='bx bx-chevron-right'></i></a>
   </div>
+
+</section>
+
+
 
 <!-- carrosel 1 Fim -->
 
@@ -185,30 +181,14 @@
 
 
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 <!-- BoxIcon -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<!-- Bootstrap -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<!-- swiffy-slider -->
-      <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- axios Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js"></script>
 
-      <script>
-        
-        var swiper = new Swiper('.swiper-slide', {
-      slidesPerView: 6,
-      spaceBetween: 10,
-      slidesPerGroup: 3,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      });
-      </script>
+
 </body>
 </html>
