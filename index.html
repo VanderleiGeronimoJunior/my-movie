@@ -163,13 +163,12 @@
 <h1>Ação</h1>
 <div class=" container-slide">
   <div class="swiper-container swiper">
-    <div class="swiper-wrapper">
-              <div id="main"></div>
-      </div>
+    <div id="main" class="swiper-wrapper">
+    </div>
 
     </div>
     <!-- Add Pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
@@ -184,6 +183,10 @@
 
 <!-- Footer Fim -->
 
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <!-- BoxIcon -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <!-- Bootstrap -->
@@ -192,10 +195,11 @@
       <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
 
       <script>
-        var swiper = new Swiper('.swiper-container', {
+        
+        var swiper = new Swiper('.swiper-slide', {
       slidesPerView: 6,
       spaceBetween: 10,
-      slidesPerGroup: 2,
+      slidesPerGroup: 3,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -204,7 +208,7 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
-</script>
+      });
+      </script>
 </body>
 </html>

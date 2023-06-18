@@ -135,23 +135,20 @@ function getMovie(url) {
     data.forEach(movie => {
         const {title, poster_path, vote_average, overview, id} = movie;
         const movieEl = document.createElement('div');
-        movieEl.classList.add('gallery');
+        movieEl.classList.add('swiper-slide');
         movieEl.innerHTML = `
-
-        <div class="item swiper-slide">
-
+        
                 <div class="movie-box">
 
-                <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" class="movie-box-img d-block w-100">
+                  <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" class="movie-box-img d-block w-100">
 
-                <div class="box-text">
-                    <h2 class="movie-title">${title}</h2>
-                    <span class="${getColor(vote_average)}">${vote_average}</span>
+                  <div class="box-text">
+                      <h2 class="movie-title">${title}</h2>
+                      <span class="${getColor(vote_average)}">${vote_average}</span>
+                  </div>
+
                 </div>
 
-            </div>
-
-        </div>
         
         `
 
