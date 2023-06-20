@@ -125,6 +125,7 @@ window.addEventListener('scroll', () => {
 //  Carousel 1
 
 const sliders = document.querySelector('.carouselBox');
+const title = document.querySelector('.title');
 var scrollPerClick;
 var imagePadding = 20;
 
@@ -158,25 +159,24 @@ function sliderScorllRight() {
 
 async function showMovieData() {
 
-
-
   var result = await axios.get(
     `${API_URL}`
   )
-
+console.log(result);
 
   result = result.data.results;
   
   result.map(function (cur, index) {
     sliders.insertAdjacentHTML(
         "beforeend",
+
+        
         `<img class="img-${index} slider-img" src="${IMG_URL}/${cur.poster_path}"/>`
     )
   });
 
   scrollPerClick = document.querySelector(".img-1").clientWidth + imagePadding;
 }
-
 
 
 // Loader

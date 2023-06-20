@@ -16,16 +16,15 @@
 
 ##  Sobre o Projeto
 
-
+ Neste projeto eu trago imagens de filmes através de uma API do Site - <a href="https://www.themoviedb.org/">themoviedb.org</a> para o carrosel onde os filmes são exibidos, fiz a requisição de dados dos filmes usando a biblioteca Axios que permite fazer solicitações HTTP facilmente. 
 
 
 ##  Objetivos
 
 - Ganhar mais conhecimento em JavaScript.
-- Trabalhar o raciocinio lógico.
 - Trabalha com API.
 - Exercitar Bootstrap.
-- Exercitar Swipper.js.
+- Aprender mais sobre APIs.
 
 ## Funcionalidades
 
@@ -38,16 +37,18 @@
 ## Captura de tela 
 📸
 
+#### Menu inicial e Carousel Slider
+<img style="width:300px" src="./assets/menu-slider.png" alt="<Menu e slider">
 
-<img style="width:600px" src="./assets/" alt="modo claro">
+#### Carousel de Filmes
+<img style="width:300px" src="./assets/carousel-de-filmes.png" alt="<Carousel de filmes">
 
 
-<img style="width:600px" src="./assets/" alt="modo escuro">
 
 
 ## Demonstração
 
-[Link Demontração]()
+[Link Demontração](<a href="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.js">My Movie</a>)
 
 
 ## Linguagens utilizadas
@@ -61,22 +62,22 @@ HTML | CSS, Bootstrap | JavaScript
 
 
 
-### Desenvolvimento contínuo
-
-
 ## Melhorias na alicação
 
+- Melhorar a Responsividade
+- Trazer os nomes do filme em protuguês
+- Colocar titulo no carrosel
+- trazer os filmes e videos para o carousel principal
 
-1. login de usuário
-2. Modal com detalhes do filme
-3. Adicionar aos Favoritos
-4. Tratar da Responsividade
 
 
 
 ## Lista de possíveis implementações
 
-
+1. login de usuário
+2. Modal com detalhes do filme
+3. Adicionar aos Favoritos
+4. Tratar da Responsividade
 
 ###   Recursos Úteis
 🔧
@@ -85,13 +86,14 @@ HTML | CSS, Bootstrap | JavaScript
 - <a href="https://www.toptal.com/designers/htmlarrows/">htmlarrows</a>
 - <a href="https://lordicon.com/">Icons by Lordicon.com</a>
 
+- <a href="https://www.themoviedb.org/">The Movie DB</a>
+
 
 - <a href="https://boxicons.com/?query=">Box Icons</a>
 - <a href="https://getbootstrap.com/docs/5.3/components/carousel/">Carousel Bootstrap</a>
 - Use a URL abaixo para trazer imagens no card, slider... passe o tamanho da imagem e depois do sinal de interrogação o tema da imagem que tu quer como car, movie, peaple, etc...
 - https://source.unsplash.com/random/2560x1080/?model
 
-###   Créditos
 
 
 ##   Autor
