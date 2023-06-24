@@ -128,7 +128,7 @@ header.shadow{
     background: var(--bg-color);
     padding: 15px 12px;
     box-sizing: content-box;
-    margin-top: 510px;
+    margin-top: 530px;
     gap: 0.5rem;
     z-index: 1;
     transition: 0.5s all linear;
@@ -284,25 +284,30 @@ header.shadow{
 
 /* Carrosel */
   .carousel2{
-    height: 250px;
-    width: 90%;
+    height: 320px;
+    width: 98%;
     position: relative;
-
+    /* border: 1px solid #f1f1f1; */
+    display: flex;
     margin: 65px auto;
 }
 .carousel2 .switchLeft,
 .carousel2 .switchRight {
     color: #f1f1f1;
     height: 100%;
-    width: 45px;
+    width: 50px;
     font-size: 25px;
     font-weight: bold;
     font-family: sans-serif;
+    text-decoration: none;
     line-height: 250px;
     text-align: center;
     background: linear-gradient(to left, transparent 0%, var(--body) 100%);
-    top: 0;
-    z-index: 6;
+    padding: 20px 0;
+    z-index: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   }
   .carousel2 .switchLeft{
     position: absolute;
@@ -316,26 +321,32 @@ header.shadow{
 
   .switchLeft i,
   .switchRight i {
-    font-size: 45px;
+    font-size: 50px;
+    transition: font-size 3s ease 0s;
+}
+
+.switchLeft i:hover,
+.switchRight i:hover {
+    font-size: 58px;
   }
 
   .carouselBox{
-    height: 250px;
+    height: 310px;
     width: auto;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
     text-align: center;
-    padding-bottom: 10px !important;
     display: flex;
+    justify-content: center;
     align-items: center;    
   }
   .carouselBox img{
-    min-width: 147px;
-    max-width: 147px;
-    height: 200px;
+    min-width: 205px;
+    height: 275px;
     background-size: cover;
     background-color: #ccc;
+    justify-content: center;
     margin: 5px 10px;
     cursor: pointer;
     border-radius: 10px;
