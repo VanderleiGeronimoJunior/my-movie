@@ -101,7 +101,7 @@ header.shadow{
 }	
 .navbar a:hover
 {
-	background: var(--main-color);
+	background: var(--bg-color);
 	border-radius: 0.2rem;
 	transition: 0.5s all linear;
 }
@@ -111,7 +111,7 @@ header.shadow{
 }
 .cat_option:hover .box_option{
     display: grid;
-    right: -26px;
+    right: -25px;
 }
 
 .cat_option .bx{
@@ -128,7 +128,7 @@ header.shadow{
     background: var(--bg-color);
     padding: 15px 12px;
     box-sizing: content-box;
-    margin-top: 520px;
+    margin-top: 510px;
     gap: 0.5rem;
     z-index: 1;
     transition: 0.5s all linear;
@@ -139,6 +139,10 @@ header.shadow{
     cursor: pointer;
     font-size: 17px;
 
+}
+
+.box_option:hover #option{
+    background: var(--bg-color);
 }
 
 
