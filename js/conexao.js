@@ -93,13 +93,24 @@ const genres = [
   console.log(result);
   
     result = result.data.results;
+
     
     result.map(function (cur, index) {
       sliders.insertAdjacentHTML(
           "beforeend",
   
           
-          `<img class="img-${index} slider-img" src="${IMG_URL}/${cur.poster_path}"/>`
+          `
+          <div class="movie-box">
+          <img class="movie-box-img img-${index} slider-img" src="${IMG_URL}/${cur.poster_path}"/>
+            <div class="box-text">
+                <h2 class="movie-title">Titulo</h2>
+              <a href="#" class="btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+          `
       )
     });
   
@@ -131,8 +142,6 @@ const genres = [
                   }
               }
               console.log(selectedGenre)
-              getMovies(API_URL + '&with_genres='+encodeURI(selectedGenre.join(',')))
-              highlightSelection()
           })
           genreEL.append(opt);
       })
