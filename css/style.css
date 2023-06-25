@@ -159,6 +159,7 @@ header.shadow{
 	background: transparent;
 	border-radius: 4rem;
 	margin-right: 1rem;
+    transition: 0.5s linear;
 }
 .search-box.shadow{
 	background: var(--container-color);
@@ -170,6 +171,21 @@ header.shadow{
 .search-box .bx:hover{
     color: var(--text-color);
 }
+input::placeholder{
+    color: var(--text-color);
+}
+input:focus{
+    background: none;
+}
+/* Estilizando o botão de cancelar do input search */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    color: silver; /* Defina a cor desejada para o botão */
+    font-size: 14px; /* Defina o tamanho da fonte desejado */
+    font-weight: bold; /* Defina o peso da fonte desejado */
+  }
+  
 #search-input{
     width: 100%;
 	border: var(--second-color);

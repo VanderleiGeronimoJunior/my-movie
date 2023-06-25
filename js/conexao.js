@@ -11,7 +11,9 @@ const linguage = "?language=pt";
 const generos = `/genre/movie/list${linguage}`;
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-const searchURL = `${url}/search/movie?${key}`;
+const searchURL = "/search/movie?";
+// const searchURL = "/search/movie?${key}&quert=";
+
 
 const genres = [
     {
@@ -92,9 +94,8 @@ const genres = [
     )
   console.log(result);
   
-    result = result.data.results;
+  result = result.data.results;
 
-    
     result.map(function (cur, index) {
       sliders.insertAdjacentHTML(
           "beforeend",
@@ -104,7 +105,7 @@ const genres = [
           <div class="movie-box">
           <img class="movie-box-img img-${index} slider-img" src="${IMG_URL}/${cur.poster_path}"/>
             <div class="box-text">
-                <h2 class="movie-title">Titulo</h2>
+                <h2 class="movie-title">${getTitle()}</h2>
               <a href="#" class="btn play-btn">
                 <i class='bx bx-right-arrow'></i>
               </a>
@@ -113,10 +114,24 @@ const genres = [
           `
       )
     });
+
+    function getTitle() {
+
+      const title = document.getElementsByClassName('movie-title');
+      
+      axios.get(API_URL)
+        .then(response => {
+          const data = response.data.results[i].title;
+          console.log(data)
+          title.innerHTML = data;
+        })
+        .catch(error => console.log(error))
+    }
   
     scrollPerClick = document.querySelector(".img-1").clientWidth + imagePadding;
   }
 
+  // Insere os Generos nas Categorias
   var selectedGenre = []
   setGenre();
   function setGenre() {
@@ -146,3 +161,29 @@ const genres = [
           genreEL.append(opt);
       })
   }
+
+  // Insere os Generos nas Categorias Fim
+
+
+  // pesquisa de filmes
+
+  const searchMovie = document.querySelector("form");
+
+  searchMovie.onsubmit = (e) => {
+    e.preventDefault();
+    const search = e.target.search.value;
+
+    if(search == ""){
+      alert("Pesquise por um Filme!");
+      return;
+    }
+
+        axios.get(`${url}${searchURL}${key}&quert=${search}`)
+          .then(data => {
+            const movie = data.results
+            console.log(data)
+          })
+    
+  }
+  
+  // pesquisa de filmes Fim
