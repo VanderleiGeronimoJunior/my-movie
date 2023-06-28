@@ -196,6 +196,204 @@ input[type="search"]::-webkit-search-cancel-button {
     
 }
 /* Search Box Fim*/
+
+/* Search */
+
+
+
+/* .search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    margin: 15px 0 30px 0;
+} */
+/* 
+.search-box form{
+    display: flex;
+    max-width: 400px;   
+}
+
+.search-box input{
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border-radius: 0.4rem 0 0 0.4rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-box .search-btn{
+    width: 120px;
+    background-color: #01579b;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 0.4rem 0.4rem 0;
+    transition: all 0.5s ease;
+}
+
+.search-box .search-btn:hover{
+    background-color: #0091ea;
+    border: 1px solid #fff;
+} */
+
+.container{
+    width: 100%;
+    max-height: 100vh;
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .card{
+    position: relative;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0.4rem;
+    line-height: 20px;
+    width: 285px;
+    height: 360px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.container .card .card-content{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 100px 10px 5px;
+    background-image: linear-gradient(180deg, rgba(51, 55, 69, 0), rgba(16, 21, 40, 0.95));
+    transition: all 0.5s ease;
+}
+
+.container .card .card-content .card-header{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .card .card-content .card-header .left-content {
+    color: var(--text-color);
+}
+
+.container .card .card-content .card-btn{
+    color: #f1f1f1;
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.4rem;
+    transition: all 0.5s ease;
+}
+
+.container .card .card-content .info{
+    max-height: 0;
+    opacity: 0;
+    color: var(--text-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.container .card:hover{
+    cursor: pointer;
+}
+
+.container .card:hover .card-content{
+    background-image: linear-gradient(180deg, rgba(51, 55, 69, 0), #101528 48%);
+}
+
+.container .card:hover .card-btn{
+    background-color: #0091ea;
+    border-color: #0091ea;
+}
+
+.container .card:hover .info{
+    max-height: 200px;
+    opacity: 1;
+    padding: 8px 0;
+}
+
+.container a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#result{
+    display: flex;
+    max-width: 1200px;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1220px;
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .search-box{
+        justify-content: center;
+    }
+
+    .search-box form{
+        margin-top: 10px;
+    }
+
+}
+
+/* Search Fim */
+
+/* modal Search */
+
+dialog::backdrop{
+    background-color: rgba(0 0 0 / .5);
+}
+
+dialog{
+    border: none;
+    position: absolute;
+    border-radius: .5rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1em rgba(0 0 0 / .3);
+    width: 40%;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    top: 30%;
+    left: 30%;
+    z-index: -998!important;
+}
+dialog.show{
+    display: flex !important;
+    z-index: 998!important;
+}
+
+.close-btn{
+    padding: 5px 15px;
+    background: #5C636A;
+    color: var(--text-color);
+    border: none;
+    border-radius: .5rem;
+}
+
+/* modal Search Fim */
 /* User */
 .user{
     display: flex;	
@@ -327,7 +525,7 @@ input[type="search"]::-webkit-search-cancel-button {
   .switchLeft i,
   .switchRight i {
     font-size: 50px;
-    transition: font-size 3s ease 0s;
+    /* transition: font-size 3s ease 0s; */
 }
 
 .switchLeft i:hover,
