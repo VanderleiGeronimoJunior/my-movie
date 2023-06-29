@@ -3,15 +3,15 @@ const key = "api_key=1b80dda88aa3961467567d2f34531e2c";
 
 // API TMDB
 
-const url = 'https://api.themoviedb.org/3';
+const myUrl = 'https://api.themoviedb.org/3';
 
 
-const API_URL = `${url}/discover/movie?sort_by=popularity.desc&${key}`;
+const API_URL = `${myUrl}/discover/movie?sort_by=popularity.desc&${key}`;
 const linguage = "?language=pt";
 const generos = `/genre/movie/list${linguage}`;
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w1280';
-const searchURL = "/search/movie?";
+const searchURL = `${myUrl}/search/movie?${key}&query=`;
 // const searchURL = "/search/movie?${key}&quert=";
 
 
@@ -156,10 +156,20 @@ const form = document.getElementById("search-box");
 const query = document.getElementById("search-input");
 const result = document.getElementById("result");
 const content = document.getElementById("content");
+const boxResult = document.getElementById("box-result");
 
 // Limpa o input search quando digita algo
 function cleanScreen() {
-  document.getElementById("content").innerHTML = ""; // Limpa o conteúdo da div
+  // content.innerHTML = "";  Limpa o conteúdo da div
+  if(query.value === ""){
+    // Exibir o conteúdo da página e ocultar o resultado da pesquisa
+    content.style.display = "block";
+    boxResult.style.display = "none";
+    return;
+  }
+    // Ocultar o conteúdo da página e exibir o resultado da pesquisa
+    content.style.display = "none";
+    boxResult.style.display = "flex";
 }
 
 let page = 1;
@@ -226,7 +236,7 @@ function clearResults() {
 // Show results in page
 function showResults(item) {
     const newContent = item.map(createMovieCard).join("");
-    result.innerHTML += newContent || "<p>Não encontrado</p>";
+    result.innerHTML += newContent || "<p class='tagp'>Não encontrado</p>";
 }
 
 // Load more results
@@ -269,7 +279,7 @@ window.addEventListener('resize', detectEnd);
 // Initialize the page
 async function init() {
     clearResults();
-    const url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&${key}&page=${page}`;
+    const url = `${API_URL}&page=${page}`;
     isSearching = false;
     await fetchAndShowResult(url);
 }

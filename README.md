@@ -78,6 +78,7 @@ HTML | CSS, Bootstrap | JavaScript
 2. Modal com detalhes do filme
 3. Adicionar aos Favoritos
 4. Tratar da Responsividade
+5. Trazer os dados em português
 
 ###   Recursos Úteis
 🔧

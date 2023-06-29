@@ -46,7 +46,7 @@
 
 	<!--Search Box -->
   <form class="search-box" id="search-box">
-    <input type="search" name="search" id="search-input" oninput="cleanScreen()" placeholder="Search Movie">
+    <input type="search" name="search" id="search-input" onkeyup="cleanScreen()" placeholder="Search Movie">
     <i class='bx bx-search'></i>	
     </form>
     <a href="#" class="user">
@@ -56,7 +56,7 @@
 
 <!-- NavBar Fim -->
 
-<div id="content">
+<div id="content" class="content">
 <!-- Carousel slide -->
 
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
