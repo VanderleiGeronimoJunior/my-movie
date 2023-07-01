@@ -162,14 +162,14 @@ const boxResult = document.getElementById("box-result");
 function cleanScreen() {
   // content.innerHTML = "";  Limpa o conteúdo da div
   if(query.value === ""){
-    // Exibir o conteúdo da página e ocultar o resultado da pesquisa
-    content.style.display = "block";
-    boxResult.style.display = "none";
+  // Exibir o conteúdo da página e ocultar o resultado da pesquisa
+  content.style.display = "block";
+  boxResult.style.display = "none";
     return;
   }
-    // Ocultar o conteúdo da página e exibir o resultado da pesquisa
-    content.style.display = "none";
-    boxResult.style.display = "flex";
+  // Ocultar o conteúdo da página e exibir o resultado da pesquisa
+  content.style.display = "none";
+  boxResult.style.display = "flex";
 }
 
 let page = 1;
@@ -262,13 +262,15 @@ function detectEnd() {
 async function handleSearch(e) {
     e.preventDefault();
     const searchTerm = query.value.trim();
+    
     if (searchTerm) {
-        isSearching = true;
-        clearResults();
-        const newUrl = `${searchURL}${searchTerm}&page=${page}`;
-        await fetchAndShowResult(newUrl);
-        query.value = "";
+      isSearching = true;
+      clearResults();
+      const newUrl = `${searchURL}${searchTerm}&page=${page}`;
+      await fetchAndShowResult(newUrl);
+      query.value = "";
     }
+    
 }
 
 // Event listeners
@@ -279,7 +281,7 @@ window.addEventListener('resize', detectEnd);
 // Initialize the page
 async function init() {
     clearResults();
-    const url = `${API_URL}&page=${page}`;
+    const url = `${API_URL}&page=${page}`;    
     isSearching = false;
     await fetchAndShowResult(url);
 }
